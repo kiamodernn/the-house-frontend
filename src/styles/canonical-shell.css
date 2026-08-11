@@ -1,34 +1,15 @@
-/* Canonical Phase 1 — measured from the 1536×1024 reference. */
-:root{--canon-bg:#000;--canon-line:#292929;--canon-soft:#151515;--canon-text:#f4f1e8;--canon-acid:#d7ff3f;--canon-frame-w:1136px;--canon-frame-left:5px;--canon-frame-radius:23px;--canon-header-h:64px}
+/* Canonical Phase 1 — desktop shell only. Mobile mockup removed from production page. */
+:root{--canon-bg:#000;--canon-line:#292929;--canon-text:#f4f1e8;--canon-acid:#d7ff3f;--canon-header-h:64px}
 html,body{background:var(--canon-bg)}
 body.canonical-shell-phase1{position:relative;overflow-x:hidden;background:#000;color:var(--canon-text)}
 body.canonical-shell-phase1>.ref-header,body.canonical-shell-phase1>.site-header{display:none!important}
-.canon-header{position:sticky;top:0;z-index:500;width:min(calc(100vw - 395px),var(--canon-frame-w));margin-left:var(--canon-frame-left);height:var(--canon-header-h);background:#000;border:1px solid #2b2b2b;border-bottom-color:#151515;border-radius:23px 23px 0 0;box-shadow:inset 0 -1px 0 rgba(255,255,255,.02)}
-.canon-header-inner{position:relative;height:62px;width:100%}
-.canon-brand{position:absolute;left:41px;top:16px;display:flex;align-items:center;gap:8px;height:34px;color:#f3f0e8;text-decoration:none;font-style:italic;transform:skew(-8deg)}
-.canon-brand-slash{position:relative;width:27px;height:13px;flex:none}
-.canon-brand-slash:before,.canon-brand-slash:after{content:'';position:absolute;left:0;width:27px;height:5px;background:var(--canon-acid);clip-path:polygon(12% 0,100% 0,86% 100%,0 100%)}
-.canon-brand-slash:before{top:0}.canon-brand-slash:after{top:7px;width:19px}
-.canon-brand-copy{display:flex;flex-direction:column;line-height:.68;transform:skew(8deg)}
-.canon-brand-copy small{font-size:8px;line-height:1;font-weight:800;letter-spacing:.14em;margin-left:3px}
-.canon-brand-copy strong{font-family:Arial Black,Impact,sans-serif;font-size:20px;line-height:.82;letter-spacing:-.045em;font-style:italic;text-shadow:0 1px 0 rgba(255,255,255,.18)}
-.canon-nav{position:absolute;left:338px;top:0;height:62px;display:flex;align-items:center;gap:29px;white-space:nowrap}
-.canon-nav a{font:700 10px/1 Arial,Helvetica,sans-serif;letter-spacing:.01em;color:#e6e6e6;text-decoration:none;transition:color .15s ease}
-.canon-nav a:hover,.canon-nav a:focus-visible{color:var(--canon-acid)}
-.canon-actions{position:absolute;right:39px;top:13px;height:38px;display:flex;align-items:center;gap:12px}
-.canon-action-icon{position:relative;width:28px;height:28px;display:grid;place-items:center;color:#f4f4f4;text-decoration:none}
-.canon-action-icon svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
-.canon-action-bell{margin-left:3px}
-.canon-action-bell i{position:absolute;right:-1px;top:-1px;width:7px;height:7px;border-radius:50%;background:var(--canon-acid);box-shadow:0 0 0 2px #000}
-.canon-explore{height:36px;min-width:102px;margin-left:10px;padding:0 15px;display:inline-flex;align-items:center;justify-content:center;gap:12px;background:var(--canon-acid);color:#050505;border-radius:4px;font:900 10px/1 Arial,Helvetica,sans-serif;letter-spacing:.01em;text-decoration:none;box-shadow:0 0 16px rgba(215,255,63,.13)}
-.canon-explore span{font-size:15px;line-height:1;transform:translateY(-1px)}
-.canon-phone-preview{position:fixed;z-index:4;top:34px;left:1178px;width:332px;height:712px;border:2px solid #303030;border-bottom:0;border-radius:44px 44px 0 0;background:#000;pointer-events:none}
-.canon-phone-preview:before{content:'';position:absolute;left:50%;top:8px;transform:translateX(-50%);width:126px;height:28px;border-radius:18px;background:#000}
-.canon-phone-status{position:absolute;left:31px;right:26px;top:14px;height:22px;display:flex;align-items:center;justify-content:space-between;color:#f4f4f4;font:700 13px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-.canon-phone-icons{display:flex;align-items:center;gap:7px;height:16px}
-.canon-cell{display:flex;align-items:flex-end;gap:1.5px;width:16px;height:11px}.canon-cell span{display:block;width:2.4px;background:#f4f4f4;border-radius:1px}.canon-cell span:nth-child(1){height:3px}.canon-cell span:nth-child(2){height:5px}.canon-cell span:nth-child(3){height:7px}.canon-cell span:nth-child(4){height:10px}
-.canon-wifi{position:relative;width:15px;height:11px;border-top:2px solid #f4f4f4;border-radius:50%}.canon-wifi:before,.canon-wifi:after{content:'';position:absolute;left:50%;transform:translateX(-50%);border-top:2px solid #f4f4f4;border-radius:50%}.canon-wifi:before{top:2px;width:10px;height:7px}.canon-wifi:after{top:6px;width:3px;height:3px}
-.canon-battery{position:relative;width:20px;height:10px;border:1.5px solid #f4f4f4;border-radius:3px}.canon-battery:before{content:'';position:absolute;right:-3px;top:2px;width:2px;height:4px;background:#f4f4f4;border-radius:1px}.canon-battery span{position:absolute;left:1.5px;top:1.5px;bottom:1.5px;width:13px;border-radius:1px;background:#f4f4f4}
-@media(min-width:1536px){.canon-header{width:1136px}.canon-phone-preview{left:1178px}}
-@media(max-width:1320px){.canon-header{width:calc(100vw - 12px);margin-left:5px}.canon-phone-preview{display:none}.canon-nav{left:30%;gap:22px}.canon-actions{right:28px}}
-@media(max-width:980px){.canon-header{position:sticky;top:0;width:100%;margin:0;height:60px;border-left:0;border-right:0;border-radius:0}.canon-header-inner{height:58px}.canon-brand{left:18px;top:14px}.canon-nav{display:none}.canon-actions{right:14px;top:11px}.canon-explore{display:none}.canon-action-icon{width:32px;height:32px}}
+.canon-header{position:sticky;top:0;z-index:500;width:calc(100vw - 10px);margin-left:5px;height:var(--canon-header-h);background:#000;border:1px solid #2b2b2b;border-bottom-color:#151515;border-radius:23px 23px 0 0;box-shadow:inset 0 -1px 0 rgba(255,255,255,.02)}
+.canon-header-inner{position:relative;height:62px;width:min(calc(100% - 82px),1440px);margin-inline:auto}
+.canon-brand{position:absolute;left:0;top:16px;display:flex;align-items:center;gap:8px;height:34px;color:#f3f0e8;text-decoration:none;font-style:italic;transform:skew(-8deg)}
+.canon-brand-slash{position:relative;width:27px;height:13px;flex:none}.canon-brand-slash:before,.canon-brand-slash:after{content:'';position:absolute;left:0;width:27px;height:5px;background:var(--canon-acid);clip-path:polygon(12% 0,100% 0,86% 100%,0 100%)}.canon-brand-slash:before{top:0}.canon-brand-slash:after{top:7px;width:19px}
+.canon-brand-copy{display:flex;flex-direction:column;line-height:.68;transform:skew(8deg)}.canon-brand-copy small{font-size:8px;line-height:1;font-weight:800;letter-spacing:.14em;margin-left:3px}.canon-brand-copy strong{font-family:Arial Black,Impact,sans-serif;font-size:20px;line-height:.82;letter-spacing:-.045em;font-style:italic}
+.canon-nav{position:absolute;left:50%;top:0;height:62px;display:flex;align-items:center;gap:29px;white-space:nowrap;transform:translateX(-50%)}.canon-nav a{font:700 10px/1 Arial,Helvetica,sans-serif;letter-spacing:.01em;color:#e6e6e6;text-decoration:none;transition:color .15s ease}.canon-nav a:hover,.canon-nav a:focus-visible{color:var(--canon-acid)}
+.canon-actions{position:absolute;right:0;top:13px;height:38px;display:flex;align-items:center;gap:12px}.canon-action-icon{position:relative;width:28px;height:28px;display:grid;place-items:center;color:#f4f4f4;text-decoration:none}.canon-action-icon svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}.canon-action-bell i{position:absolute;right:-1px;top:-1px;width:7px;height:7px;border-radius:50%;background:var(--canon-acid);box-shadow:0 0 0 2px #000}.canon-explore{height:36px;min-width:102px;margin-left:10px;padding:0 15px;display:inline-flex;align-items:center;justify-content:center;gap:12px;background:var(--canon-acid);color:#050505;border-radius:4px;font:900 10px/1 Arial,Helvetica,sans-serif;text-decoration:none;box-shadow:0 0 16px rgba(215,255,63,.13)}.canon-explore span{font-size:15px;line-height:1;transform:translateY(-1px)}
+.canon-phone-preview{display:none!important}
+@media(max-width:1180px){.canon-header-inner{width:calc(100% - 50px)}.canon-nav{gap:20px}.canon-nav a{font-size:9px}.canon-explore{min-width:94px}}
+@media(max-width:980px){.canon-header{width:100%;margin:0;height:60px;border-left:0;border-right:0;border-radius:0}.canon-header-inner{height:58px;width:calc(100% - 32px)}.canon-brand{top:14px}.canon-nav{display:none}.canon-actions{top:11px}.canon-explore{display:none}.canon-action-icon{width:32px;height:32px}}
