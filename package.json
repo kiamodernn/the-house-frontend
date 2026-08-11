@@ -1,10 +1,10 @@
 {
   "name": "the-house-frontend",
   "private": true,
-  "version": "0.4.0",
+  "version": "0.5.0",
   "type": "module",
   "scripts": {
-    "generate": "node scripts/generate-pages.mjs && node scripts/enhance-premium.mjs && node scripts/apply-demo-noindex.mjs && tsc --outDir public/assets --noEmit false",
+    "generate": "node scripts/generate-pages.mjs && node scripts/enhance-premium.mjs && node scripts/enhance-reference.mjs && node scripts/apply-demo-noindex.mjs && tsc --outDir public/assets --noEmit false",
     "dev": "npm run generate && vite",
     "build": "npm run generate && node scripts/seo-check.mjs && node scripts/link-check.mjs && vite build",
     "typecheck": "tsc --noEmit",
