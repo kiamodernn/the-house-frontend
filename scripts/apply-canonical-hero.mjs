@@ -54,7 +54,7 @@ const hero = `<section class="canon-hero" data-canon-hero>
 </section>`;
 
 html = html.replace(/<link rel="stylesheet" href="\/src\/styles\/canonical-hero\.css(?:\?v=[^"]*)?">/g, '');
-html = html.replace('</head>', '<link rel="stylesheet" href="/src/styles/canonical-hero.css?v=070"></head>');
+html = html.replace('</head>', '<link rel="stylesheet" href="/src/styles/canonical-hero.css?v=071"></head>');
 const next = html.replace(/<section class="ref-hero">[\s\S]*?<\/section>\s*(?=<section class="ref-pulse">)/, hero);
 if (next === html) throw new Error('Canonical Phase 2 hero replacement failed');
 if ((next.match(/<h1\b/g) || []).length !== 1) throw new Error('Canonical Phase 2 expected exactly one H1');
