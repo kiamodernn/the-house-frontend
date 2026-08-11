@@ -6,7 +6,7 @@ export function initHeroSlider() {
   const next = root.querySelector<HTMLButtonElement>('[data-slider-next]');
   const current = root.querySelector<HTMLElement>('[data-slider-current]');
   const bars = Array.from(root.querySelectorAll<HTMLElement>('.canon-slider-bars i'));
-  let active = Number(root.dataset.active ?? '1');
+  let active = 1;
 
   const render = () => {
     root.dataset.active = String(active);
