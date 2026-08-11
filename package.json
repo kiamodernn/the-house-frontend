@@ -1,7 +1,7 @@
 {
   "name": "the-house-frontend",
   "private": true,
-  "version": "0.2.4",
+  "version": "0.3.0",
   "type": "module",
   "scripts": {
     "generate": "node scripts/generate-pages.mjs && node scripts/enhance-home.mjs && node scripts/apply-demo-noindex.mjs && tsc --outDir public/assets --noEmit false",
