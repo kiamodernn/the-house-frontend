@@ -22,7 +22,6 @@ for (const relative of routes) {
 
   html = html.replace('</head>', '<link rel="stylesheet" href="/src/styles/measured-top-shell.css?v=100"></head>');
 
-  if (!html.includes('canon-header')) throw new Error(`Measured top shell: canonical header missing in ${relative}`);
   if (relative === 'index.html') {
     if (!html.includes('canon-hero')) throw new Error('Measured top shell: canonical hero missing');
     if (!html.includes('canon-pulse')) throw new Error('Measured top shell: canonical pulse missing');
@@ -33,4 +32,4 @@ for (const relative of routes) {
   count++;
 }
 
-console.log(`Applied measured single-source top shell to ${count} routes.`);
+console.log(`Applied measured hero/pulse shell to ${count} routes.`);

@@ -1,0 +1,8 @@
+@media(max-width:767px){
+  .cd-header-shell{grid-template-columns:auto 1fr;gap:6px;padding-inline:10px}
+  .cd-header-left{gap:6px}.cd-menu-btn{width:34px;height:34px;border-radius:12px}.cd-wordmark{font-size:16px}
+  .cd-actions{gap:3px}.cd-actions .cd-icon-btn,.cd-actions .cd-theme-toggle,.cd-wallet,.cd-profile{width:34px;height:34px;border-radius:12px;flex:0 0 34px}
+  .cd-actions .cd-icon-btn svg,.cd-actions .cd-theme-toggle svg{width:17px;height:17px}.cd-wallet{padding:0;justify-content:center}.cd-coin-icon{width:24px;height:24px;font-size:11px}.cd-profile{display:grid}.cd-avatar{width:32px;height:32px;font-size:9px}.cd-online-dot{right:-1px;bottom:-1px;width:9px;height:9px}
+  .cd-notification-badge{min-width:17px;height:17px;padding:0 4px;font-size:9px;right:-3px;top:-4px}
+}
+@media(max-width:390px){.cd-header{padding-inline:8px}.cd-header-shell{height:64px;padding-inline:8px}.cd-wordmark{font-size:15px}.cd-actions{gap:2px}.cd-menu-btn,.cd-actions .cd-icon-btn,.cd-actions .cd-theme-toggle,.cd-wallet,.cd-profile{width:32px;height:32px;flex-basis:32px}.cd-avatar{width:30px;height:30px}}
