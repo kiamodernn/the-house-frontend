@@ -78,6 +78,7 @@ export function initCasinoDayliHeader(): void {
   }, { passive: true });
 
   if (!openButton || !closeButton || !drawer || !backdrop) return;
+  drawer.setAttribute('inert', '');
 
   let previouslyFocused: HTMLElement | null = null;
   let lockedScrollY = 0;
@@ -105,6 +106,7 @@ export function initCasinoDayliHeader(): void {
     if (drawer.dataset.open !== 'true') return;
     drawer.dataset.open = 'false';
     drawer.setAttribute('aria-hidden', 'true');
+    drawer.setAttribute('inert', '');
     backdrop.dataset.open = 'false';
     root.dataset.cdDrawerOpen = 'false';
     openButton.setAttribute('aria-expanded', 'false');
@@ -117,6 +119,7 @@ export function initCasinoDayliHeader(): void {
     if (drawer.dataset.open === 'true') return;
     previouslyFocused = document.activeElement instanceof HTMLElement ? document.activeElement : openButton;
     lockPage();
+    drawer.removeAttribute('inert');
     backdrop.hidden = false;
     root.dataset.cdDrawerOpen = 'true';
     openButton.setAttribute('aria-expanded', 'true');
