@@ -1,0 +1,5 @@
+/* CasinoDayli clean rebuild baseline: header is the only visible product section. */
+html[data-cd-theme="dark"] body{background:#07090d;color:#f7f8fa}
+html[data-cd-theme="light"] body{background:#f4f5f7;color:#101318}
+.header-only-main{min-height:calc(100dvh - 120px);background:var(--cd-canvas,#07090d);transition:background-color .22s ease}
+html[data-cd-theme="light"] .header-only-main{background:#f4f5f7}
