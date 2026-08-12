@@ -1,10 +1,10 @@
 {
   "name": "the-house-frontend",
   "private": true,
-  "version": "0.10.0-measured-shell",
+  "version": "0.11.0-casinodayli-header",
   "type": "module",
   "scripts": {
-    "generate": "node scripts/generate-pages.mjs && node scripts/enhance-premium.mjs && node scripts/enhance-reference.mjs && node scripts/apply-pixel-pass.mjs && node scripts/apply-canonical-shell.mjs && node scripts/apply-canonical-hero.mjs && node scripts/apply-canonical-pulse.mjs && node scripts/apply-measured-top-shell.mjs && node scripts/apply-demo-noindex.mjs && tsc --outDir public/assets --noEmit false",
+    "generate": "node scripts/generate-pages.mjs && node scripts/enhance-premium.mjs && node scripts/enhance-reference.mjs && node scripts/apply-pixel-pass.mjs && node scripts/apply-canonical-hero.mjs && node scripts/apply-canonical-pulse.mjs && node scripts/apply-measured-top-shell.mjs && node scripts/apply-casinodayli-header.mjs && node scripts/apply-demo-noindex.mjs && tsc --outDir public/assets --noEmit false",
     "dev": "npm run generate && vite",
     "build": "npm run generate && node scripts/seo-check.mjs && node scripts/link-check.mjs && vite build",
     "typecheck": "tsc --noEmit",
