@@ -1,7 +1,7 @@
 {
   "name": "the-house-frontend",
   "private": true,
-  "version": "0.12.0-header-only",
+  "version": "0.13.0-navigation-system",
   "type": "module",
   "scripts": {
     "generate": "node scripts/generate-pages.mjs && node scripts/apply-casinodayli-header.mjs && node scripts/strip-to-header-only.mjs && node scripts/apply-demo-noindex.mjs && tsc --outDir public/assets --noEmit false",
