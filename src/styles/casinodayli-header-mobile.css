@@ -1,8 +1,41 @@
+/* CasinoDayli mobile app navigation — Telegram/iOS/Android first. */
 @media(max-width:767px){
-  .cd-header-shell{grid-template-columns:auto 1fr;gap:6px;padding-inline:10px}
-  .cd-header-left{gap:6px}.cd-menu-btn{width:34px;height:34px;border-radius:12px}.cd-wordmark{font-size:16px}
-  .cd-actions{gap:3px}.cd-actions .cd-icon-btn,.cd-actions .cd-theme-toggle,.cd-wallet,.cd-profile{width:34px;height:34px;border-radius:12px;flex:0 0 34px}
-  .cd-actions .cd-icon-btn svg,.cd-actions .cd-theme-toggle svg{width:17px;height:17px}.cd-wallet{padding:0;justify-content:center}.cd-coin-icon{width:24px;height:24px;font-size:11px}.cd-profile{display:grid}.cd-avatar{width:32px;height:32px;font-size:9px}.cd-online-dot{right:-1px;bottom:-1px;width:9px;height:9px}
-  .cd-notification-badge{min-width:17px;height:17px;padding:0 4px;font-size:9px;right:-3px;top:-4px}
+  .cd-header{top:0;padding:max(10px,env(safe-area-inset-top,0px)) 10px 0}
+  .cd-header-shell,.cd-header[data-scrolled="true"] .cd-header-shell{height:66px;padding-inline:10px;grid-template-columns:minmax(0,auto) minmax(0,1fr);gap:6px;border-radius:20px}
+  .cd-header-left{gap:5px;min-width:0}.cd-menu-btn{width:38px;height:38px;flex:0 0 38px;border-radius:13px}.cd-menu-btn svg{width:20px;height:20px}
+  .cd-brand{gap:6px;min-width:0}.cd-brand-mark{width:27px;height:27px;flex-basis:27px}.cd-brand-mark:before{inset:4px;border-radius:7px}.cd-wordmark{font-size:17px;overflow:hidden;text-overflow:clip}
+  .cd-actions{gap:4px;min-width:0}.cd-actions .cd-icon-btn,.cd-actions .cd-theme-toggle,.cd-wallet,.cd-profile{width:38px;height:38px;min-width:38px;flex:0 0 38px;border-radius:13px;padding:0;justify-content:center}
+  .cd-actions .cd-icon-btn svg,.cd-actions .cd-theme-toggle svg{width:18px;height:18px}.cd-wallet strong{display:none}.cd-coin-icon{width:24px;height:24px;flex-basis:24px}.cd-coin-icon svg{width:22px;height:22px}
+  .cd-theme-toggle{display:grid;place-items:center}.cd-theme-toggle .cd-theme-knob{display:none}.cd-theme-toggle .cd-theme-icon{display:none}.cd-theme-toggle[aria-checked="true"] .cd-theme-moon,.cd-theme-toggle[aria-checked="false"] .cd-theme-sun{display:grid;color:var(--cd-brand-active)}
+  .cd-profile{display:grid}.cd-avatar{width:34px;height:34px;flex-basis:34px;font-size:9px}.cd-online-dot{right:-1px;bottom:-1px;width:9px;height:9px;border-width:2px}.cd-profile-chevron{display:none}
+  .cd-notification-badge{min-width:18px;height:18px;padding:0 4px;font-size:9px;right:-4px;top:-5px}
+
+  .cd-drawer{width:min(88vw,360px);padding-inline:16px}.cd-drawer-head{margin-bottom:22px}.cd-drawer-nav a{min-height:54px;font-size:16px}.cd-drawer-backdrop{bottom:0}
+
+  .cd-bottom-nav{pointer-events:auto;position:fixed;z-index:50;left:50%;right:auto;bottom:0;width:min(100%,680px);height:calc(var(--cd-bottom-nav-height) + env(safe-area-inset-bottom,0px));padding:0 6px env(safe-area-inset-bottom,0px);display:grid;grid-template-columns:repeat(5,minmax(0,1fr));align-items:stretch;transform:translateX(-50%);background:var(--cd-bg-surface);border-top:1px solid var(--cd-border-default);box-shadow:0 -10px 28px rgba(0,0,0,.1);transition:background-color .22s ease,border-color .22s ease,box-shadow .22s ease}
+  .cd-bottom-nav a{position:relative;min-width:56px;min-height:48px;padding:8px 3px 6px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;color:var(--cd-text-secondary);text-decoration:none;font-family:var(--cd-font);font-size:11px;font-weight:600;line-height:1;transition:color .16s ease,background-color .16s ease,transform .12s ease}
+  .cd-bottom-nav a:active{transform:translateY(1px)}.cd-bottom-nav a[aria-current="page"]{color:var(--cd-brand-active)}.cd-bottom-nav a[aria-current="page"]:before{content:"";position:absolute;top:0;left:34%;right:34%;height:2px;border-radius:999px;background:var(--cd-brand-active)}
+  .cd-bottom-icon{height:22px;display:grid;place-items:center}.cd-bottom-icon svg{width:21px;height:21px}
+  .header-only-main{min-height:calc(100dvh - 90px);padding-bottom:calc(var(--cd-bottom-nav-height) + env(safe-area-inset-bottom,0px) + 18px)}
+  html[data-cd-drawer-open="true"] .cd-bottom-nav{pointer-events:none}
 }
-@media(max-width:390px){.cd-header{padding-inline:8px}.cd-header-shell{height:64px;padding-inline:8px}.cd-wordmark{font-size:15px}.cd-actions{gap:2px}.cd-menu-btn,.cd-actions .cd-icon-btn,.cd-actions .cd-theme-toggle,.cd-wallet,.cd-profile{width:32px;height:32px;flex-basis:32px}.cd-avatar{width:30px;height:30px}}
+
+@media(max-width:430px){
+  .cd-header-shell{padding-inline:8px}.cd-wordmark{font-size:16px}.cd-header-left{gap:4px}.cd-actions{gap:3px}
+  .cd-menu-btn,.cd-actions .cd-icon-btn,.cd-actions .cd-theme-toggle,.cd-wallet,.cd-profile{width:36px;height:36px;min-width:36px;flex-basis:36px}.cd-avatar{width:32px;height:32px;flex-basis:32px}
+}
+
+@media(max-width:390px){
+  .cd-header{padding-inline:8px}.cd-header-shell{height:64px;padding-inline:7px;gap:4px;border-radius:18px}.cd-brand-mark{width:24px;height:24px;flex-basis:24px}.cd-brand-mark:before{inset:4px}.cd-wordmark{font-size:15px;letter-spacing:-.045em}
+  .cd-menu-btn,.cd-actions .cd-icon-btn,.cd-actions .cd-theme-toggle,.cd-wallet,.cd-profile{width:34px;height:34px;min-width:34px;flex-basis:34px;border-radius:11px}.cd-menu-btn svg,.cd-actions .cd-icon-btn svg,.cd-actions .cd-theme-toggle svg{width:17px;height:17px}.cd-avatar{width:30px;height:30px;flex-basis:30px}.cd-actions{gap:2px}
+  .cd-drawer{width:min(92vw,350px)}.cd-bottom-nav a{font-size:10.5px}.cd-bottom-icon svg{width:20px;height:20px}
+}
+
+@media(max-width:360px){
+  .cd-header{padding-inline:6px}.cd-header-shell{padding-inline:6px}.cd-brand-mark{display:none}.cd-wordmark{font-size:14.5px}.cd-menu-btn{width:32px;height:32px;min-width:32px;flex-basis:32px}.cd-actions .cd-icon-btn,.cd-actions .cd-theme-toggle,.cd-wallet,.cd-profile{width:32px;height:32px;min-width:32px;flex-basis:32px}.cd-avatar{width:28px;height:28px;flex-basis:28px}.cd-online-dot{width:8px;height:8px}.cd-actions{gap:1px}.cd-notification-badge{right:-3px;top:-5px}
+  .cd-drawer{width:94vw}.cd-bottom-nav{padding-inline:2px}.cd-bottom-nav a{min-width:0;font-size:10px}
+}
+
+@media(min-width:768px) and (max-width:1023px){
+  .cd-bottom-nav{display:none}.header-only-main{padding-bottom:24px}
+}
