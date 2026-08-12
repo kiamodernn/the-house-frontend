@@ -32,7 +32,10 @@ function makeHeader(relative){
 let count=0;
 for(const relative of routes){
   const file=resolve(process.cwd(),relative);let html=readFileSync(file,'utf8');const header=makeHeader(relative);
-  html=html.replace(/<link rel="stylesheet" href="\/src\/styles\/casinodayli-header\.css(?:\?v=[^"]*)?">/g,'').replace('</head>','<link rel="stylesheet" href="/src/styles/casinodayli-header.css?v=111"></head>');
+  html=html
+    .replace(/<link rel="stylesheet" href="\/src\/styles\/casinodayli-header\.css(?:\?v=[^"]*)?">/g,'')
+    .replace(/<link rel="stylesheet" href="\/src\/styles\/casinodayli-header-mobile\.css(?:\?v=[^"]*)?">/g,'')
+    .replace('</head>','<link rel="stylesheet" href="/src/styles/casinodayli-header.css?v=111"><link rel="stylesheet" href="/src/styles/casinodayli-header-mobile.css?v=111"></head>');
   if(/<header class="canon-header">[\s\S]*?<\/header>/.test(html))html=html.replace(/<header class="canon-header">[\s\S]*?<\/header>/,header);else if(/<header class="ref-header">[\s\S]*?<\/header>/.test(html))html=html.replace(/<header class="ref-header">[\s\S]*?<\/header>/,header);else if(/<header class="site-header">[\s\S]*?<\/header>/.test(html))html=html.replace(/<header class="site-header">[\s\S]*?<\/header>/,header);else throw new Error(`CasinoDayli header replacement failed for ${relative}`);
   if(!html.includes('data-cd-header'))throw new Error(`CasinoDayli header missing in ${relative}`);writeFileSync(file,html);count++;
 }
